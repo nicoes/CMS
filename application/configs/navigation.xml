@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation>
+	<nav>
+
+	<home>
+		<label>Dashboard</label>
+		<uri>/</uri>
+	</home>
+	
+	<pages>
+		<label>Pagina's</label>
+		<uri>/pages</uri>
+	</pages>
+	
+    <content>
+     <label>Inhoud blokken</label>
+     <uri>/content</uri>
+    </content>
+	
+	</nav>
+</navigation>

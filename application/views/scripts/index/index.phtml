@@ -1,0 +1,7 @@
+<?php if($this->errormessage != null) :?>
+<?php echo $this->error($this->errormessage); ?>
+<?php endif; ?>
+<div id="login">
+<?php echo($this->form); ?>
+</div> 
+<a href="<?php echo $this->url("./index/logout"); ?>">Log uit</a>

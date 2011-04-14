@@ -1,0 +1,33 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink(); ?>
+    <?php echo $this->headStyle(); ?>
+    <?php echo $this->headScript(); ?>
+</head>
+<body>
+    <div id="page">
+    	<div id='navigation'>
+    		<div class="wrapper">
+        		<a class="logout" href="<?php echo $this->baseUrl()."/index/logout"; ?>">Log uit</a>
+        		<?php if(isset($this->back)) :?>
+        		<a class="back" href="<?php echo $this->baseUrl().$this->back; ?>">Terug</a>
+        		<?php endif; ?>
+        		<div class="clear"></div>
+        	</div>
+        </div>
+        <div id="cms">
+        	<div class="wrapper">
+		        <div id='tabs'>
+		        	<?php echo $this->navigation()->menu(); ?>
+		        </div>
+		    	<div id="content">
+		            <?php echo $this->layout()->content; ?>
+		        </div>
+	        </div>
+        </div>
+    </div>
+</body>
+</html>

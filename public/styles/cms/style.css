@@ -1,0 +1,157 @@
+body
+{
+	font-family: Verdana;
+	font-size: 12px;
+	margin:0px auto;
+}
+h1, h2
+{
+	font-weight:normal;
+	font-size:20px;
+	text-shadow:1px 1px #eee;
+}
+h2
+{
+	font-size:16px;
+}
+a
+{
+	color:#111;
+}
+#page
+{
+	text-align: center;
+	width:100%;
+	display: block;
+	margin: 0px auto;
+}
+.wrapper
+{
+	width:1000px !important;
+	margin:0px auto;
+	text-align:left;
+}
+.clear
+{
+	clear:both;
+}
+.block
+{
+	text-align: left;
+}
+.space
+{
+	margin:10px;
+}
+.left
+{
+	float:left;
+}
+/* ----------------- Main Layout ----------------- */
+
+#content
+{
+
+	margin-bottom:30px;
+
+}
+/* ----------------- CUD ----------------- */
+.ced
+{
+	margin:5px;
+}
+.add, .del, .edit
+{
+	padding:10px;
+	padding-left: 25px;
+	background-image: url(../images/smallicons/13.jpg);
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.del{
+	background-image: url(../images/smallicons/118.jpg);}
+.add{
+	background-image: url(../images/smallicons/95.jpg);}
+/* ----------------- Navigation ----------------- */
+
+#navigation
+{
+	padding:20px;
+	background-color: #e8e8e8;
+}
+#navigation a
+{
+	float:left;
+	margin-left: 10px;
+}
+
+/* --------------- Overview ---------------------*/
+.row
+{
+	padding:10px;
+}
+.viewrow
+{
+	padding:10px;
+	margin:5px;
+	border: green 1px solid;
+}
+.testtitle
+{
+	font-size: 1.3em;
+}
+.inactive
+{
+	opacity: 0.5;
+	border: #AAAAAA 1px solid;
+}
+/* --------------- Testform ---------------------*/ 
+
+.formrow
+{
+	margin:5px;
+	border: #AAAAAA 1px solid;
+}
+.formrow .del
+{
+	float:right;
+}
+.formelement
+{
+	padding:10px;
+	margin:10px;
+}
+.formrow .title{
+	background-color: #e8e8e8;
+	padding:10px;
+	margin-bottom:10px;
+	
+}
+.formrow .desc{
+	margin:10px;
+}
+
+/* -------------- Navigation --------------------- */
+#tabs
+{
+	float:left;
+	margin:10px;
+	background-color:#ddd;
+}
+#tabs ul
+{
+	margin:0;
+	padding:0;
+}
+#tabs li
+{
+	margin:0;
+	padding:0;
+	display:block;
+	padding:10px;
+	width:100px;
+}
+
+/* -------------- Navigation --------------------- */
+
+
