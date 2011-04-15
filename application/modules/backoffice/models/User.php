@@ -1,5 +1,5 @@
 <?php 
-class App_Model_User extends Em_Model_Abstract
+class Backoffice_Model_User extends Em_Model_Abstract
 {
 	protected $role = -1;
 	protected $username;

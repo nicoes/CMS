@@ -3,7 +3,7 @@
 
 /* Klasse wordt als Singleton ge•mplementeerd */
  
-class App_Model_Auth_Authenticate
+class Backoffice_Model_Auth_Authenticate
 {
 	protected static $_instance = null;
 
@@ -25,7 +25,7 @@ class App_Model_Auth_Authenticate
 	
 	protected function __construct()
 	{
-		$this->_user = new App_Model_User();
+		$this->_user = new Backoffice_Model_User();
 		
 		$this->_auth = Zend_Auth::getInstance();
 		
@@ -82,7 +82,7 @@ class App_Model_Auth_Authenticate
 	{
 		if(!isset($this->_umapper))
 		{
-			$umapper = new App_Model_UserMapper(new App_Model_Daos_Users());
+			$umapper = new Backoffice_Model_UserMapper(new Backoffice_Model_Daos_Users());
 		}
 		$user = $umapper->fetchFiltered($umapper->getDao()->getAdapter()->quoteInto("username = ?",$identity));
 		return $user[0];
@@ -94,7 +94,7 @@ class App_Model_Auth_Authenticate
 		if ($this->_auth == null) {
 			$this->_auth = Zend_Auth::getInstance();
 		}
-		$this->_user = new App_Model_User();
+		$this->_user = new Backoffice_Model_User();
 		$this->_auth->clearIdentity();
 	}
 

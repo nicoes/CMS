@@ -1,5 +1,5 @@
 <?php 
-class App_Model_UserMapper extends Em_Model_Mapper_Db_Basic
+class Backoffice_Model_UserMapper extends Em_Model_Mapper_Db_Basic
 {
     protected $_basemodel = "App_Model_User";
 	

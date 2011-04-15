@@ -8,8 +8,8 @@ class IndexController extends Em_Controller_Action
         $this->role = -1;
     }
 	public function preDispatch() {
-		$user= App_Model_Auth_Authenticate::getInstance()->getUser();
-		if($user instanceof App_Model_User)
+		$user= Backoffice_Model_Auth_Authenticate::getInstance()->getUser();
+		if($user instanceof Backoffice_Model_User)
 		{
 			$this->role = $user->role;
 		}
@@ -21,7 +21,7 @@ class IndexController extends Em_Controller_Action
          	{
 	        	$uname = $this->_request->getPost('username');
 	        	$password = $this->_request->getPost('password');
-         		$auth = App_Model_Auth_Authenticate::getInstance();
+         		$auth = Backoffice_Model_Auth_Authenticate::getInstance();
          		if(Zend_Auth_Result::SUCCESS == $auth->login($uname, $password))
          		{
          			$this->role = $auth->getUser()->role;
@@ -35,7 +35,7 @@ class IndexController extends Em_Controller_Action
          {
          	$this->_redirect("/index/view");
          }
-         $form = new App_Form_Login();
+         $form = new Backoffice_Form_Login();
          $form->setAction($this->url);
          $this->view->form = $form;
     }
@@ -45,7 +45,7 @@ class IndexController extends Em_Controller_Action
     }
     public function logoutAction()
     {
-    	$auth = App_Model_Auth_Authenticate::getInstance();
+    	$auth = Backoffice_Model_Auth_Authenticate::getInstance();
     	$auth->logout();
     	$this->_forward("index");
     }
