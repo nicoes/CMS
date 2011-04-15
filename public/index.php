@@ -10,13 +10,24 @@ defined('APPLICATION_PATH')
 
 // Define application environment
 defined('APPLICATION_ENV')
-    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'development'));
 
-// Ensure library/ is on include_path
-set_include_path(implode(PATH_SEPARATOR, array(
+define('ZEND_LIBRARY_PATH', realpath(APPLICATION_PATH . '/../library/Zend'));
+define('ZENDX_LIBRARY_PATH', realpath(APPLICATION_PATH . '/../library/ZendX'));
+define('APP_LIBRARY_PATH', realpath(APPLICATION_PATH . '/library'));
+
+$paths = array(
     realpath(APPLICATION_PATH . DS .'..'. DS .'library'),
-    get_include_path(),
-)));
+    APP_LIBRARY_PATH,
+	ZEND_LIBRARY_PATH,
+	ZEND_LIBRARY_PATH,
+	get_include_path()
+);
+
+/**
+ * Set the include paths to point to the new defined paths
+ */
+set_include_path(implode(PATH_SEPARATOR, $paths));
 
 /** Zend_Application */
 require_once 'Zend'. DS .'Application.php';  
