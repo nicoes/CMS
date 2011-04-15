@@ -35,9 +35,9 @@ class IndexController extends Em_Controller_Action
          {
          	$this->_redirect("/index/view");
          }
-         $form = new App_Form_Login();
-         $form->setAction($this->url);
-         $this->view->form = $form;
+         //$form = new Backoffice_Form_Login();
+         //$form->setAction($this->url);
+         $this->view->form = new Backoffice_Model_Henk();
     }
     public function viewAction()
     {

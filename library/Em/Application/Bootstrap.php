@@ -1,14 +1,10 @@
 <?php
 class Em_Application_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
-	public function _initAutoLoader()
-	{
-		$autoloader = new Zend_Application_Module_Autoloader(array(
-			'namespace' => 'App_',
-			'basePath' => APPLICATION_PATH,
-		));
-		
-	}
+    protected function _initConfig()
+    {
+    	Zend_Registry::set('config', new Zend_Config($this->getOptions()));
+    }
 	protected function _initAutoStartSession() {
 		$this->bootstrap('session');
 		Zend_Session::start();

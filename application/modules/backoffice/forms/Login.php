@@ -1,5 +1,5 @@
 <?php 
-class App_Form_Login extends Em_Form_Basic
+class Backoffice_Form_Login extends Em_Form_Basic
 {
 
     public function init()
