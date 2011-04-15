@@ -3,7 +3,7 @@
 
 /* Klasse wordt als Singleton ge•mplementeerd */
  
-class App_Model_Auth_Authenticate
+class App_Auth_Authenticate
 {
 	protected static $_instance = null;
 
